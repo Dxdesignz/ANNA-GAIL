@@ -8,7 +8,7 @@
     ---darkbrown:#704309;
     ---stoke:#ffe7de;
     ---lightpink:#f0dfdf;
-    ---para:#646464;
+    ---para:#909090;
 }
 /* Root */
 
@@ -47,14 +47,16 @@ padding: 20px 150px;
     justify-content: space-between;
 }
 .header .container nav{
-    margin-left: 30px;
     display: flex;
     align-items: center;
 }
+.header .container .navbar{
+    margin-right: 20px;
+}
 .header .container .navbar a{
-    font-size: 16px;
+    font-size: 20px;
     color: var(---black);
-    font-weight: 700;
+    font-weight: 500;
     padding: 15px 20px;
 }
 .header .container nav .right-data{
@@ -277,7 +279,9 @@ padding: 20px 150px;
 .service .container .s1:hover{
     background-color: var(---lightpink);
     border: 2px solid var(---white);
-    box-shadow: 0px 0px 20px #ce8a8a63;
+    box-shadow: 0px 0px 20px #ce8a8a3f;
+    transform: scale(1.1,1.1);
+    transition: 0.7s;
 }
 .service .container .s1{
     text-align: center;
@@ -450,11 +454,12 @@ padding: 20px 150px;
 .contact .container{
     background-color: transparent;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 50px;
 }
 .contact .container .left-data{
     background-color: transparent;
+    padding-left: 170px;
 }
 .contact .container .left-data .icon{
     display: flex;
@@ -480,7 +485,7 @@ padding: 20px 150px;
 .contact .container .left-data .icon .text h5{
     color: var(---black);
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .contact .container .left-data .icon .text p{
     color: var(---para);
@@ -490,6 +495,7 @@ padding: 20px 150px;
 }
 .contact .container .right-data{
     background-color: transparent;
+    padding-right: 170px;
 }
 .contact .container .right-data .form .data-input{
     display: flex;
@@ -508,11 +514,13 @@ padding: 20px 150px;
     border-radius: 10px;
     padding-left: 20px;
     font-weight: 500;
-    color: var(---black);
+    color: var(---para);
+    font-size: 17px;
 }
 .contact .container .right-data .form .data-input input::placeholder{
     font-weight: 500;
-    color: var(---black);
+    color: var(---para);
+    font-size: 17px;
 }
 .contact .container .right-data .form .message .input{
     width: 720px;
@@ -527,11 +535,13 @@ padding: 20px 150px;
     border-radius: 10px;
     padding-left: 20px;
     font-weight: 500;
-    color: var(---black);
+    color: var(---para);
+    font-size: 17px;
 }
 .contact .container .right-data .form .message input::placeholder{
     font-weight: 500;
-    color: var(---black);
+    color: var(---para);
+    font-size: 17px;
 }
 .contact .container .right-data .form .button{
     margin-top: 20px;
@@ -625,11 +635,29 @@ padding: 20px 150px;
 
 /* media quries */
 
-@media (max-width:1536px) {
+@media (max-width:1690px){
+
+    .contact .container .left-data{
+        padding-left: 100px;
+    }
+    .contact .container .right-data{
+        padding-right: 100px;
+    }
+}
+
+@media (max-width:1554px) {
     section{
         padding: 10px 70px;
     }
-
+    .contact .container .left-data{
+        padding-left: 50px;
+    }
+    .contact .container .right-data{
+        padding-right: 50px;
+    }
+    .header .container .navbar{
+        margin-right: 0px;
+    }
 }
 
 @media (max-width:1280px) {
@@ -705,6 +733,12 @@ padding: 20px 150px;
     }
     .contact .container{
         display: block;
+    }
+    .contact .container .left-data{
+        padding-left: 0px;
+    }
+    .contact .container .right-data{
+        padding-right: 0px;
     }
     .contact .container .left-data{
         display: flex;
@@ -882,6 +916,20 @@ padding: 20px 150px;
         height: 80px;
         font-size: 30px;
     }
+    .contact .container .right-data .form .message input{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .contact .container .right-data .form .message input::placeholder{
+        font-size: 12px;
+    }
+    .contact .container .right-data .form .data-input .input input{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .contact .container .right-data .form .data-input .input input::placeholder{
+        font-size: 12px;
+    }
     
 }
 
@@ -943,22 +991,22 @@ padding: 20px 150px;
     .contact .container .left-data .icon {
         display: none;
     }
-    .contact .container .right-data .form .button{
-        margin-left: 0px;
-    }
     .contact .container .right-data .form .message input{
-        font-size: 12px;
+        font-size: 10px;
         padding-left: 10px;
     }
     .contact .container .right-data .form .message input::placeholder{
-        font-size: 12px;
+        font-size: 10px;
     }
     .contact .container .right-data .form .data-input .input input{
-        font-size: 12px;
+        font-size: 10px;
         padding-left: 10px;
     }
     .contact .container .right-data .form .data-input .input input::placeholder{
-        font-size: 12px;
+        font-size: 10px;
+    }
+    .contact .container .right-data .form .button{
+        margin-left: 0px;
     }
     .footer{
         margin-top: 50px;
